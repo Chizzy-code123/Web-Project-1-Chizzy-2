@@ -18,23 +18,116 @@
           </li>
         </ul>
       </nav>
-      <h1>Animation Survey</h1>
+      <h1>Animation Questions</h1>
     </header>
 
     <h2>Please answer the following questions</h2>
-    <form>
-      <fieldset>
-        <legend>What Type of Animation Is It?</legend>
-        <ol>
-          <li>
-            <img
-              src="images/simpsons-meme.webp"
-              width="300"
-              height="200"
-              alt="Simpsons Meme" />
-          </li>
-        </ol>
+    <form id="animation-questions" method="get">
+      <fieldset form="animation-questions">
+        <legend>Guess The Animation Type</legend>
+
+        <label for="simpsons-animation-type"
+          >What type of animation is used in the Simpsons?</label
+        >
+        <select id="simpsons-animation-type" name="simpsons-animation-type">
+          <option value="traditional">Traditional &#x1F39E;</option>
+          <option value="3d-computer">3D Computer Animation &#x1F5A5;</option>
+          <option value="2d-computer">2D Computer Animation &#x1F4BB;</option>
+          <option value="stop-motion">Stop Motion Animation &#x1F9F1;</option>
+        </select>
+
+        <p>What type of animation is mostly used in Toy Story?</p>
+
+        <input
+          type="radio"
+          id="traditional"
+          name="toy-story-animation-type"
+          value="traditional"
+          required />
+        <label for="traditional">Traditional</label><br />
+
+        <input
+          type="radio"
+          id="3d-computer"
+          name="toy-story-animation-type"
+          value="3d-computer"
+          required />
+        <label for="3d-computer">3D Computer</label><br />
+
+        <input
+          type="radio"
+          id="2d-computer"
+          name="toy-story-animation-type"
+          value="2d-computer"
+          required />
+        <label for="2d-computer">2D Computer</label><br />
+
+        <input
+          type="radio"
+          id="stop-motion"
+          name="toy-story-animation-type"
+          value="stop-motion"
+          required />
+        <label for="stop-motion">Stop Motion</label>
+
+        <br />
+        <br />
+
+        <label for="fortnite-animation-type"
+          >What type of animation is mostly used in Fortnite?
+        </label>
+        <br />
+        <br />
+
+        <input
+          type="radio"
+          id="traditional"
+          name="fortnite-animation-type"
+          value="traditional"
+          required />
+        <label for="traditional">Traditional</label><br />
+
+        <input
+          type="radio"
+          id="3d-computer"
+          name="fortnite-animation-type"
+          value="3d-computer"
+          required />
+        <label for="3d-computer">3D Computer</label><br />
+
+        <input
+          type="radio"
+          id="2d-computer"
+          name="fortnite-animation-type"
+          value="2d-computer"
+          required />
+        <label for="2d-computer">2D Computer</label><br />
+
+        <input
+          type="radio"
+          id="stop-motion"
+          name="fortnite-animation-type"
+          value="stop-motion"
+          required />
+        <label for="stop-motion">Stop Motion</label>
       </fieldset>
+
+      <fieldset form="animation-questions">
+        <legend>Preferences</legend>
+        <label for="how-much-you-like-animation"
+          >On a scale of 1-10, how much do you like animation?</label
+        >
+        <input
+          type="range"
+          id="how-much-you-like-animation"
+          name="how-much-you-like-animation"
+          min="1"
+          max="10"
+          required />
+      </fieldset>
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
     </form>
   </body>
 </html>
