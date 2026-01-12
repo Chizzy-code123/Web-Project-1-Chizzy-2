@@ -9,10 +9,9 @@
     <header>
       <nav>
         <ul>
-          <!-- Navigation links here \/\/ -->
-          <li>
-            <a href="index.html">Home</a>
-          </li>
+          <!-- Navigation links go here -->
+          <li></li>
+          <a href="index.html">Home</a>
           <li>
             <a href="animation-questions.html">Animation Survey</a>
           </li>
@@ -21,231 +20,248 @@
       <h1>Animation Questions</h1>
     </header>
 
-    <h2>Please answer the following questions</h2>
-    <!-- 
-      This form will gather user's answers for each question and gather
-      their preferences on animations. It SHOULD mark the answers as correct
-      or incorrect but I don't know how to use JavaScript yet.
+    <main>
+      <h2>Please answer the following questions</h2>
+      <p>
+        This form will ask you questions about different types of animation used
+        in popular shows and games as well as your preferences on different
+        types of animation.
+      </p>
 
-      It has an ID of "animation-questions" to uniquely identify
-      the form and explain its purpose.
-      
-      The GET attribute tells the browser how to send the form data when the form is submitted.
-        This makes the information that the user added, show up on the URL
-      The script uses the GET method because we don't know how to use back-end scripting yet
-    -->
-    <form id="animation-questions" method="get">
       <!-- 
-        This fieldset groups related questions about guessing the type
-        of animation used in different shows and games.
+        This form will gather user's answers for each question and gather
+        their preferences on animations. It SHOULD mark the answers as correct
+        or incorrect but I don't know how to use JavaScript yet.
 
-        The form attribute is used to associate the fieldset
-         with the form animation-questions.
+        It has an ID of "animation-questions" to uniquely identify
+        the form and explain its purpose.
+        
+        The GET attribute tells the browser how to send the form data when the form is submitted.
+          This makes the information that the user added, show up on the URL
+        The script uses the GET method because we don't know how to use back-end scripting yet
       -->
-      <fieldset form="animation-questions">
+      <form id="animation-questions" method="get">
         <!-- 
-          This will display a title for the fieldset group to let
-          users know what type of questions they should answer.
+          This fieldset groups related questions about guessing the type
+          of animation used in different shows and games.
+
+          The form attribute is used to associate the fieldset
+          with the form animation-questions.
         -->
-        <legend>Guess The Animation Type</legend>
-
-        <!-- 
-          This label and select input gets the user's answer for the type of animation
-          used in The Simpsons show.
-
-          The label is linked to the select input.
-
-          the input has an ID of "simpsons-animation-type" to uniquely identify
-          its input as the simpsons-animation-type answer spot.
-        -->
-        <label for="simpsons-animation-type"
-          >What type of animation is used in the Simpsons?</label
-        >
-        <select id="simpsons-animation-type" name="simpsons-animation-type">
+        <fieldset form="animation-questions">
           <!-- 
-            The options within the select input provide the different types of animation
-            that the user can choose from to answer and will be displayed in a dropdown.
+            This will display a title for the fieldset group to let
+            users know what type of questions they should answer.
+          -->
+          <legend>Guess The Animation Type</legend>
+
+          <!-- 
+            This select input gets the user's answer for the type of animation
+            used in The Simpsons show.
+
+            The label is linked to the select input and
+            will display the on-screen question.
+
+            The input has an ID of "simpsons-animation-type" to uniquely identify
+            its input as the simpsons-animation-type answer spot.
+
+            It has a name of "simpsons-animation-type" that clearly indicates that it
+            will store the value that the user decides what type of animation is
+            used in The Simpsons.
+          -->
+          <label for="simpsons-animation-type"
+            >What type of animation is used in the Simpsons?</label
+          >
+
+          <select id="simpsons-animation-type" name="simpsons-animation-type">
+            <!-- 
+              The options within the select input provide the different types of animation
+              that the user can choose from to answer and will be displayed in a dropdown.
+              The user can only select one of these options.
+
+              The value attribute is used to specify the value that will be sent to the server
+              when the form is submitted but in this case, it shows up in the URL.
+
+              Each value attribute is unique to each option.
+            -->
+            <option value="traditional">Traditional &#x1F58C;</option>
+            <option value="3d-computer">3D Computer Animation &#x1F5A5;</option>
+            <option value="2d-computer">2D Computer Animation &#x1F4BB;</option>
+            <option value="stop-motion">Stop Motion Animation &#x1F9F1;</option>
+          </select>
+
+          <!--
+            This question uses radio buttons to allow the user to select
+            one answer from multiple choices.
+
+            The p tag is used to display the question text
+
+            The input has an ID specified for each radio button to uniquely identify
+            each answer option which will be used to link the label to the input.
+
+            The name attribute is the same for all radio buttons in this group to
+            group them together, allowing only one option to be selected at a time.
 
             The value attribute is used to specify the value that will be sent to the server
-            when the form is submitted.
+            when the form is submitted and it shows up on the URL.
 
-            The user can only select one of these options.
+            The required attribute ensures that the user must select one of
+            the options before submitting the form.
+
+            The label tag under the input is specified for each radio button to display
+            the option in words.
+
+            The for attribute links it to the input ID above.
           -->
-          <option value="traditional">Traditional &#x1F58C;</option>
-          <option value="3d-computer">3D Computer Animation &#x1F5A5;</option>
-          <option value="2d-computer">2D Computer Animation &#x1F4BB;</option>
-          <option value="stop-motion">Stop Motion Animation &#x1F9F1;</option>
-        </select>
+          <p>What type of animation is mostly used in Toy Story?</p>
+
+          <input
+            type="radio"
+            id="traditional"
+            name="toy-story-animation-type"
+            value="traditional"
+            required />
+          <label for="traditional">Traditional</label><br />
+
+          <input
+            type="radio"
+            id="3d-computer"
+            name="toy-story-animation-type"
+            value="3d-computer"
+            required />
+          <label for="3d-computer">3D Computer</label><br />
+
+          <input
+            type="radio"
+            id="2d-computer"
+            name="toy-story-animation-type"
+            value="2d-computer"
+            required />
+          <label for="2d-computer">2D Computer</label><br />
+
+          <input
+            type="radio"
+            id="stop-motion"
+            name="toy-story-animation-type"
+            value="stop-motion"
+            required />
+          <label for="stop-motion">Stop Motion</label>
+
+          <br />
+          <br />
+
+          <label for="fortnite-animation-type"
+            >What type of animation is mostly used in Fortnite?
+          </label>
+
+          <br />
+
+          <input
+            type="text"
+            id="fortnite-animation-type"
+            name="fortnite-animation-type" />
+        </fieldset>
 
         <!-- 
-          This question uses radio buttons to allow the user to select
-          one answer from multiple choices.
-
-          The p tag is used to display the question text
-
-          The input has an ID specified for each radio button to uniquely identify
-          each answer option which will be shown in the URL. If the id is the same
-          as another radio button then it will not work properly.
-
-          The name attribute is the same for all radio buttons in this group to 
-          group them together,
-          allowing only one option to be selected at a time.
-
-          The required attribute ensures that the user must select one of
-          the options before submitting the form.
-
-          The label tag under the input is specified for each radio button to display
-          the option text.
+          This fieldset gathers user's preferences on how much they like animation
+          by using a range input that allows the user to select a value between
+          1 to 10 and gathers the user's preferences on different types of
+          animation that they enjoy watching by using checkboxes to allow the user to select
+          multiple answers from the options provided to display inside
+          the URL when the submit button is pressed.
         -->
-        <p>What type of animation is mostly used in Toy Story?</p>
+        <fieldset form="animation-questions">
+          <legend>Preferences</legend>
+          <p>
+            Which of the following types of animation do you like? (Select all
+            that apply)
+          </p>
 
-        <input
-          type="radio"
-          id="traditional"
-          name="toy-story-animation-type"
-          value="traditional"
-          required />
-        <label for="traditional">Traditional</label><br />
+          <!-- 
+            Each input has a unique ID to identify each checkbox option.
 
-        <input
-          type="radio"
-          id="3d-computer"
-          name="toy-story-animation-type"
-          value="3d-computer"
-          required />
-        <label for="3d-computer">3D Computer</label><br />
+            The name attribute is the same for all checkboxes in this group
+            to group them together.
 
-        <input
-          type="radio"
-          id="2d-computer"
-          name="toy-story-animation-type"
-          value="2d-computer"
-          required />
-        <label for="2d-computer">2D Computer</label><br />
+            The value attribute is used to specify the value that will be sent to the server
+            when the form is submitted but it shows up on the URL since I am using GET.
 
-        <input
-          type="radio"
-          id="stop-motion"
-          name="toy-story-animation-type"
-          value="stop-motion"
-          required />
-        <label for="stop-motion">Stop Motion</label>
+            The label tag under each input is specified for each checkbox
+            to display the option text.
 
-        <br />
-        <br />
+            The for attribute links it to the input ID above.
+          -->
+          <input
+            type="checkbox"
+            id="traditional-pref"
+            name="animation-preferences"
+            value="traditional" />
+          <label for="traditional-pref">Traditional</label>
 
-        <label for="fortnite-animation-type"
-          >What type of animation is mostly used in Fortnite?
-        </label>
-        <br />
-        <input
-          type="text"
-          id="fortnite-animation-type"
-          name="fortnite-animation-type" />
-      </fieldset>
+          <input
+            type="checkbox"
+            id="3d-computer-pref"
+            name="animation-preferences"
+            value="3d-computer" />
+          <label for="3d-computer-pref">3D Computer</label>
 
-      <!-- 
-        This fieldset gathers user's preferences on how much they like animation
-        by using a range input that allows the user to select a value between
-        1 and 10 and gathers user's preferences on different types of
-        animation that they enjoy watching by using checkboxes to allow the user to select
-        multiple answers from the options provided to display inside
-        the URL when the submit button is pressed.
-        The label is linked to the range input.
+          <input
+            type="checkbox"
+            id="2d-computer-pref"
+            name="animation-preferences"
+            value="2d-computer" />
+          <label for="2d-computer-pref">2D Computer</label>
 
-        The required attribute ensures that the user must select a value before submitting the form.
-      -->
-      <fieldset form="animation-questions">
-        <legend>Preferences</legend>
-        <p>
-          Which of the following types of animation do you like? (Select all
-          that apply)
-        </p>
+          <input
+            type="checkbox"
+            id="stop-motion-pref"
+            name="animation-preferences"
+            value="stop-motion" />
+          <label for="stop-motion-pref">Stop Motion</label>
+          <br />
+          <!-- 
+            This label is specified for the range input to display the question text.
+            The range input allows the user to select a value between 1 and 10.
+
+            It has an ID of "like-anim-films" to link the label to the input.
+
+            The name of the input is "how-much-you-like-animated-films" which will store the value that
+            the user enters as the how-much-you-like-animated-films
+            answer in the URL when the form is submitted.
+
+            The min and max attributes specify the minimum and maximum
+            values that the user can drag to pick on the range.
+          -->
+          <label for="like-anim-films"
+            >On a scale of 1-10, how much do you like animated films?</label
+          >
+
+          <input
+            type="range"
+            id="like-anim-films"
+            name="how-much-you-like-animated-films"
+            min="1"
+            max="10"
+            required />
+        </fieldset>
 
         <!-- 
-          Each input has a unique ID to identify each checkbox option.
-
-          The name attribute is the same for all checkboxes in this group
-          to group them together.
-
-          The value attribute is used to specify the value that will be sent to the server
-          when the form is submitted and it shows up on the URL.
-
-          The label tag under each input is specified for each checkbox
-          to display the option text.
-
-          The for attribute links it to the input ID above.
+          This submit button allows the user to submit their answers to the
+          form and if the form method was set as POST,
+          the data would be sent to the server.
         -->
-        <input
-          type="checkbox"
-          id="traditional-pref"
-          name="animation-preferences"
-          value="traditional" />
-        <label for="traditional-pref">Traditional</label>
+        <input type="submit" value="Submit" />
 
-        <input
-          type="checkbox"
-          id="3d-computer-pref"
-          name="animation-preferences"
-          value="3d-computer" />
-        <label for="3d-computer-pref">3D Computer</label>
-
-        <input
-          type="checkbox"
-          id="2d-computer-pref"
-          name="animation-preferences"
-          value="2d-computer" />
-        <label for="2d-computer-pref">2D Computer</label>
-
-        <input
-          type="checkbox"
-          id="stop-motion-pref"
-          name="animation-preferences"
-          value="stop-motion" />
-        <label for="stop-motion-pref">Stop Motion</label>
-        <br />
         <!-- 
-          This label is specified for the range input to display the question text.
-          The range input allows the user to select a value between 1 and 10.
-
-          It has an ID of "like-anim-films" to uniquely identify
-          the input as the rating how much user likes animated films input.
-
-          The input has an ID of "like-anim-films" to uniquely identify
-          its input as the how-much-you-like-animated-films answer input.
-
-          The name of the input is "how-much-you-like-animated-films" which will store the value that
-          the user enters as the how-much-you-like-animated-films
-           answer in the URL when the form is submitted.
+          The reset button allows the user to clear all
+          the answers so they can restart the form.
         -->
-        <label for="like-anim-films"
-          >On a scale of 1-10, how much do you like animated films?</label
-        >
-        <!--
-          The min and max attributes specify the range of values
-          that the user can select.
-        -->
-        <input
-          type="range"
-          id="like-anim-films"
-          name="how-much-you-like-animated-films"
-          min="1"
-          max="10"
-          required />
-      </fieldset>
+        <input type="reset" value="Reset" />
+      </form>
+    </main>
 
-      <!-- 
-        This submit button allows the user to submit their answers to the
-        form and if the form method was set as POST,
-        the data would be sent to the server.
-      -->
-      <input type="submit" value="Submit" />
-
-      <!-- 
-        The reset button allows the user to clear all
-        the answers so they can restart the form.
-      -->
-      <input type="reset" value="Reset" />
-    </form>
+    <footer>
+      <p>&copy; 2025 Chizzy Nwankwo</p>
+    </footer>
   </body>
 </html>
