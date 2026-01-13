@@ -19,10 +19,10 @@
         </ul>
       </nav>
       <h1>Animation Questions</h1>
+      <h2>Please answer the following questions.</h2>
     </header>
 
     <main>
-      <h2>Please answer the following questions.</h2>
       <p>
         This form will ask you questions about different types of animation used
         in popular shows and games as well as your preferences on different
@@ -30,9 +30,9 @@
       </p>
 
       <!-- 
-        This form will gather user's answers for each question and gather
+        This form will gather users' answers for each question and gather
         their preferences on animations. It SHOULD mark the answers as correct
-        or incorrect but we haven't learned how to back-end script yet.
+        or incorrect but we haven't learned how to backend script yet.
 
         It has an ID of "animation-questions" to uniquely identify
         the form and explain its purpose. It was chosen it because it clearly indicates
@@ -40,7 +40,7 @@
         
         The GET attribute tells the browser how to send the form data when the form is submitted.
         This makes the information that the user added, show up on the URL
-        The script uses the GET method because we don't know how to use back-end scripting yet
+        The script uses the GET method because we don't know how to use backend scripting yet
       -->
       <form id="animation-questions" method="get">
         <!-- 
@@ -58,7 +58,7 @@
           <legend>Guess The Animation Type</legend>
 
           <!-- 
-            The select input gets the user's answer for the type of animation
+            The select input gets the users' answer for the type of animation
             used in The Simpsons show.
 
             The label is linked to the select input and
@@ -168,7 +168,7 @@
         </fieldset>
 
         <!-- 
-          This fieldset gathers user's preferences on how much they like animation
+          This fieldset gathers users' preferences on how much they like animation
           by using checkboxes to allow the user to select
           multiple answers from the options provided to display inside
           the URL when the submit button is pressed and by using range inputs.
@@ -180,12 +180,12 @@
             that apply)
           </p>
 
-          <!-- 
+          <!--
             Each input has a unique ID to identify each checkbox option.
 
             The name attribute is the same for all checkboxes in this group
             to group them together. The name "animation-preferences" indicates that
-            it will store the user's selected animation preferences in the URL
+            it will store the users' selected animation preferences in the URL
             when the form is submitted.
 
             The value attribute is used to specify the value that the animation-preferences will store
@@ -252,8 +252,8 @@
         <!-- 
           This submit button allows the user to submit their answers to the
           form and if the form method was set as POST,
-          the data would be sent to the server but its set to GET so all
-          the information the player added will be shown in the URL.
+          the data would be sent to the server but it's set to GET so all
+          the information that the player added will be shown in the URL.
         -->
         <input type="submit" value="Submit" />
 
